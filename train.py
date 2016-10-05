@@ -26,7 +26,7 @@ def train(args):
     train_X, train_y = read_data(args.data_limit)    
     model = get_model(dropout_rate, model_weights_filename)
     checkpointer = ModelCheckpoint(filepath=ckpt_model_weights_filename,verbose=1)
-    model.fit(train_X, train_y, nb_epoch=args.epoch, batch_size=arg.batch_size, callbacks=[checkpointer], shuffle="batch")
+    model.fit(train_X, train_y, nb_epoch=args.epoch, batch_size=args.batch_size, callbacks=[checkpointer], shuffle="batch")
     model.save_weights(model_weights_filename, overwrite=True)
 
 def val():

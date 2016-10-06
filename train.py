@@ -47,9 +47,9 @@ def val():
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--type', type=str, default='train')
-	parser.add_argument('--epoch', type=int, default=10)
+	parser.add_argument('--epoch', type=int, default=50)
 	parser.add_argument('--batch_size', type=int, default=256)
-	parser.add_argument('--data_limit', type=int, default=1000, help='Number of data points to fed for training')
+	parser.add_argument('--data_limit', type=int, default=215359, help='Number of data points to fed for training')
 	args = parser.parse_args()
 
 	if args.type == 'train':
